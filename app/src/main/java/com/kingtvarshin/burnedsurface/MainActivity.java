@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private static final String TAG = "MyActivity";
     ImageView body;
-    Button Btopinion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,13 +22,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         body = (ImageView)findViewById(R.id.body);
-        Btopinion = (Button)findViewById(R.id.opinion_bt);
 
 
         load_image(R.drawable.burns);
         body.setOnClickListener(this);
-        Btopinion.setOnClickListener(this);
-        image_location();
+//        image_location();
 
 
     }
@@ -39,21 +36,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    private void image_location() {
-        body.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    int loc[] = new int[2];
-                    v.getLocationOnScreen(loc);
-                    Log.d(TAG, "loc[0]: " + loc[0] + ", loc[1]: " + loc[1] +
-                            ", event.getX(): " + (int)event.getX() +
-                            ", event.getY(): " + (int)event.getY());
-                }
-                return true;
-            }
-        });
-    }
+//    private void image_location() {
+//        body.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+//                    int loc[] = new int[2];
+//                    v.getLocationOnScreen(loc);
+//                    Log.d(TAG, "loc[0]: " + loc[0] + ", loc[1]: " + loc[1] +
+//                            ", event.getX(): " + (int)event.getX() +
+//                            ", event.getY(): " + (int)event.getY());
+//                }
+//                return true;
+//            }
+//        });
+//    }
 
 
     @Override

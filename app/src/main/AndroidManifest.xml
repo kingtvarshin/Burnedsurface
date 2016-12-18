@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Burnedparts_estimate"></activity>
+        <activity android:name=".Burnedparts_estimate" />
+        <activity android:name=".Opinion"></activity>
     </application>
 
 </manifest>

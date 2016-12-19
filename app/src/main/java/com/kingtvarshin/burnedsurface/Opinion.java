@@ -34,10 +34,10 @@ public class Opinion extends AppCompatActivity {
         percent.setText("C'est votre BSA : "+Integer.toString(bsa)+"%");
 
         if ( bsa >=0 && bsa < 20){
-            text.setText("bla");
+            text.setText("text_sample1");
         }
         else
-            text.setText("blatoo");
+            text.setText("text_sample2");
 
         cir.setProgress(bsa);
 
